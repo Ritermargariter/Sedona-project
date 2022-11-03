@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hotels</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="inner-header header">
+    <nav class="header-navigation">
+      <a href="index.html" class="header-logo">
+        <img src="img/index-logo.svg" width="138" height="70" alt="Логотип Седона">
+      </a>
+      <ul class="header-navigation__list">
+        <li class="header-navigation__item"><a href="#">Информация</a></li>
+        <li class="header-navigation__item"><a href="#">Фото и видео</a></li>
+        <li class="header-navigation__item"><a href="#">Карта штата</a></li>
+        <li class="header-navigation__item--current"><a href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="visually-hidden">Каталог</h1>
+      <section class="filter-hotel">
+        <h2 class="visually-hidden">Фильтрация</h2>
+        <form class="filter-hotel__form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filter-hotel__set">
+            <legend>Инфраструктура:</legend>
+            <ul class="filter-hotel__list">
+              <li class="filter-hotel__item">
+                <input class="visually-hidden filter-hotel__input-checkbox" name="pool" type="checkbox"
+                  checked="Бассейн" id="pool">
+                <label for="pool">Бассейн</label>
+              </li>
+              <li class="filter-hotel__item">
+                <input class="visually-hidden filter-hotel__input-checkbox" type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="filter-hotel__item">
+                <input class="visually-hidden filter-hotel__input-checkbox" type="checkbox" name="Wi-Fi" id="Wi-Fi">
+                <label for="Wi-Fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-hotel__set">
+            <legend>Тип жилья:</legend>
+            <ul class="filter-hotel__list">
+              <li class="filter-hotel__item">
+                <input class="visually-hidden filter-hotel__input-checkbox" type="checkbox" checked="Гостиница"
+                  name="hotel" id="hotel">
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li class="filter-hotel__item">
+                <input class="visually-hidden filter-hotel__input-checkbox" type="checkbox" checked="Мотель"
+                  name="hostel" id="hostel">
+                <label for="hostel">Мотель</label>
+              </li>
+              <li class="filter-hotel__item">
+                <input class="visually-hidden filter-hotel__input-checkbox" type="checkbox" checked="Аппартаменты"
+                  name="apartments" id="apartments">
+                <label for="apartments">Аппартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-hotel__set filter-hotel__set--range">
+            <legend tabindex="0">Стоимость в сутки (Р):</legend>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min" tabindex="0">
+                <span class="visually-hidden">ползунок, минимальная цена</span>
+              </div>
+              <div class="range-toggle range-toggle-max" tabindex="0">
+                <span class="visually-hidden">ползунок, максимальная цена</span>
+              </div>
+            </div>
+          <button type="submit">Показать</button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="sorting-hotel">
+        <h2 class="visually-hidden">Сортировка</h2>
+        <p>Найдено:3</p>
+        <p>Сортировка:</p>
+        <ul class="sorting-hotel__list">
+          <li>
+            <a href="#">По цене</a>
+          </li>
+          <li>
+            <a href="#">По типу</a>
+          </li>
+          <li>
+            <a href="#">По рейтингу</a>
+          </li>
+        </ul>
+        <div class="sorting-hotel__button">
+          <button type="submit">
+          </button>
+          <button type="submit">
+          </button>
+        </div>
+      </section>
+      <section class="hotels">
+        <h2 class="visually-hidden">Отели</h2>
+        <ul class="hotel__list">
+          <li class="hotel__item">
+            <a href="#">
+              <h3> Amara resort&spa</h3>
+                <img src="img/catalog-amara.jpg" alt="" width="135" height="90">
+            </a>
+            <b>от 4000Р.</b>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <!-- еще надо добавить см макет-->
+          </li>
+          <li class="hotel__item">
+            <a href="#">
+              <h3>Desert quail inn</h3>
+              <img src="img/catalog-desert.jpg" alt="" width="135" height="90">
+            </a>
+            <b>от 3000Р.</b>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <!-- еще надо добавить см макет-->
+          </li>
+          <li class="hotel__item">
+            <a href="#">
+              <h3>Villas at poco diablo</h3>
+              <img src="img/catalog-villas.jpg" alt="" width="135" height="90">
+            </a>
+            <b>от 2000Р.</b>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <!-- еще надо добавить см макет-->
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="inner-footer footer">
+    <section class="footer__hashtag">
+      <p>#VISITSEDONA<br/>
+        <a class="footer-phone" href="tel:+74956660166"> Тел:+7(495)666-01-66</a>
+      </p>
+    </section>
+
+    <section>
+      <ul class="footer__social-list">
+        <li class="footer__social-link">
+          <a href="#">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-link">
+          <a href="#">
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-link">
+          <a href="#">
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <p class="footer__copyright">
+      website by
+      <a class="footer__copy-link" href="https://htmlacademy.ru">
+        <img src="img/html-academy-logo.svg">
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.button {
+  cursor: pointer;
+  border: none;
+}
+
+.button--plus,
+.button--minus {
+  background-color: transparent;
+}
+
+.button--plus:hover path,
+.button--minus:hover rect {
+  fill: #000000;
+}
+
+.button--plus:active path,
+.button--minus:active rect {
+  fill: #81B3D2;
+}
+
+.button--minus svg {
+  display: block;
+}
+

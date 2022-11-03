@@ -1,0 +1,48 @@
+.search-hotel {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.search-hotel__heading {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 23px;
+}
+
+.search-hotel__text {
+  line-height: 24px;
+  margin-bottom: 48px;
+  color: #333333;
+}
+
+.search-hotel__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.search-hotel__map {
+  height: 593px;
+  background-color: #81b3d2;
+  background-image: url("../img/map.png");
+}
+
+.search-hotel__button {
+  position: relative;
+  padding: 30px;
+  width: 568px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $basic-white;
+  text-transform: uppercase;
+  background-color: $korich;
+  z-index: 2;
+  overflow: hidden;
+  &:hover {
+    background-color: $korich-hover;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $korich-active;
+  }
+}

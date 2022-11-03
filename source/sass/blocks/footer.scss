@@ -1,0 +1,50 @@
+.footer {
+  background-color: $transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: -120px auto;
+  min-height: 120px;
+  z-index: 10;
+  width: 1200px;
+}
+
+.footer__hashtag {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.footer__social-list {
+  display: flex;
+}
+
+.footer__social-link {
+  background-color: $basic-blue;
+  padding: 16px 16px 0;
+  margin: 3px;
+  &:hover {
+    background-color: #669EC0;
+  }
+  &:active {
+    background-color: #5496BD;
+  }
+  &:active path {
+    fill: #A9A9A9
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copy-link {
+  margin-left: 10px;
+  &:hover path {
+    fill: #81B3D2;
+  }
+  &:active path {
+    fill: #A9A9A9;
+  }
+}
+
