@@ -1,7 +1,8 @@
 .header {
   position: relative;
-  width: 320px;
+  width: 88%;
   margin: 0 auto;
+  max-width: 767px;
 }
 
 .header-logo {
@@ -9,21 +10,24 @@
   left: 50%;
   transform: translateX(-50%);
   top: 0;
+  z-index: 2;
 }
 
 .header-navigation {
   position: relative;
   width: auto;
-  min-height: 51px;
+  min-height: 55px;
+  background-color: $basic-white;
 }
 
 .header-navigation__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  padding: 0;
+  top: 17px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
   z-index: 2;
-  width: 70px;
-  height: 50px;
   background-color: $basic-white;
   cursor: pointer;
   border: none;
@@ -31,93 +35,45 @@
     display: none;
   }
 }
+//менюшка
 
 .header-navigation--closed .header-navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
-  left: 20px;
-  width: 23px;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 4px;
   background-color: $basic-blue;
   box-shadow: 0 8px 0 0 $basic-blue, 0 16px 0 0 $basic-blue;
 }
 
+.header-navigation--closed .header-navigation__toggle:hover::before {
+  background-color: rgba($basic-blue, 70%);
+  box-shadow:
+    0 8px 0 0 rgba($basic-blue, 70%),
+    0 16px 0 0 rgba($basic-blue, 70%);
+}
 
 .header-navigation--closed .header-navigation__toggle:active::before {
-  background-color: rgba(#ffffff, 30%);
+  background-color: rgba($basic-blue, 30%);
   box-shadow:
-    0 8px 0 0 rgba(#ffffff, 30%),
-    0 16px 0 0 rgba(#ffffff, 30%);
+    0 8px 0 0 rgba($basic-blue, 30%),
+    0 16px 0 0 rgba($basic-blue, 30%);
 }
+//крестик
 
-@media (max-width: $mobile-width-only) {
-  .header-navigation--closed .header-navigation__item {
-    display: none;
-    &--active {
-      display: block;
-    }
-  }
-
-  .main-nav--opened .header-navigation__list {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 70px;
-    z-index: 10;
-    min-height: 80vh;
-    background-color: $basic-blue;
-  }
-
-  .main-nav--opened .header-navigation__list::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 7px;
-    height: 100%;
-    box-shadow: inset 4px 0 7px -2px rgba(#000000, 40%);
-  }
-
-  .header-navigation--nojs .header-navigation__toggle {
-    display: none;
-  }
-
-  .header-navigation--nojs .header-navigation__list {
-    position: static;
-    min-height: 0;
-  }
-
-  .header-navigation--nojs  .header-navigation__list {
-    display: block;
-  }
-
-  .header-navigation--nojs .header-navigation__item--active a {
-    padding-right: 21px;
-    padding-left: 21px;
-    text-align: left;
-  }
-
-  .header-navigation--nojs  {
-    display: block;
-    background-color: #6a4d38;
-  }
-}
-
-.main-nav--opened .header-navigation__toggle {
-  top: 0;
-  right: auto;
-  left: 0;
+.header-navigation--opened .header-navigation__toggle {
+  z-index: 11;
+  background-color: $basic-blue;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 24px;
-    left: 18px;
-    width: 36px;
-    height: 2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
     background-color: #ffffff;
   }
 
@@ -129,27 +85,42 @@
   &::after {
     transform: rotate(-45deg);
   }
-
-  &:active::before,
-  &:active::after {
-    background-color: rgba(#ffffff, 30%);
-  }
 }
 
+  @media (max-width: $mobile-width-only) {
+  .header-navigation--closed .header-navigation__item {
+    display: none;
+  }
 
+  .header-navigation--opened .header-navigation__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $basic-blue;
+  }
 
+  //доработать no js
+  .header-navigation--nojs .header-navigation__toggle {
+    display: none;
+  }
 
+  .header-navigation--nojs .header-navigation__list {
+    position: static;
+    min-height: 0;
+  }
 
+  .header-navigation--nojs  .header-navigation__item {
+    display: block;
+  }
 
-
-
-
-
-
-
-
-
-
+  .header-navigation--nojs  {
+    margin-top: 56px;
+    display: block;
+    background-color: $basic-white;
+  }
+}
 
 .header-navigation__list {
   font-weight: 700;
@@ -160,6 +131,7 @@
 .header-navigation__item {
   text-align: center;
   box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  padding: 15px 0;
 }
 
 

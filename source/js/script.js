@@ -70,10 +70,10 @@ navMain.classList.remove('header-navigation--nojs');
 navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('header-navigation--closed')) {
     navMain.classList.remove('header-navigation--closed');
-    navMain.classList.add('main-nav--opened');
+    navMain.classList.add('header-navigation--opened');
   } else {
     navMain.classList.add('header-navigation--closed');
-    navMain.classList.remove('main-nav--opened');
+    navMain.classList.remove('header-navigation--opened');
   }
 });
 

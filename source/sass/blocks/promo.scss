@@ -1,5 +1,27 @@
 .promo {
   text-align: center;
+  margin: 35px 0;
+}
+
+.promo p:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.promo br {
+  display: none;
+}
+
+
+
+
+
+
+
+/*
+.promo {
+  text-align: center;
   margin-top: 42px;
   margin-bottom: 51px;
 }
@@ -9,3 +31,4 @@
   font-size: 21px;
   line-height: 26px;
 }
+*/
