@@ -1,4 +1,46 @@
 .search-hotel {
+  margin-top: 38px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.search-hotel__text {
+  color: #333333;
+}
+
+.search-hotel__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+/*поправить*/
+.search-hotel__map {
+  height: 593px;
+  background-color: #81b3d2;
+  background-image: url("../img/map.png");
+}
+
+.search-hotel__button {
+  position: relative;
+  padding: 16px 0;
+  width: 89%;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $basic-white;
+  text-transform: uppercase;
+  background-color: $basic-blue;
+  z-index: 2;
+  overflow: hidden;
+  &:hover {
+    background-color: #669EC0;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496BD;
+  }
+}
+
+/*.search-hotel {
   margin-top: 60px;
   text-align: center;
 }
@@ -46,3 +88,4 @@
     background-color: $korich-active;
   }
 }
+*/

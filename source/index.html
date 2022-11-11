@@ -30,56 +30,61 @@
       <img src="img/index-main-1.png" width="2400" height="1130" alt="Добро пожаловать в Седону">
       </div>
       <div class="promo">
-        <p>Седона-небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+        <p>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </div>
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="features__list">
-          <li class="features__item-wide features__item-wide--photo-right">
+          <li class="features__item features__item--picture">
             <div class="features__text">
               <h3>Настоящий городок</h3>
               <span>— №1 —</span>
               <p>Седона-не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img src="img/true-city.png" width="800" height="255">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-city-dekstop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg">
+              <img class="features__image" width="320" height="260" src="img/photo-city-mobile.jpg" alt="Sedona city building">
+            </picture>
             <ul class="features__sublist">
-              <li>
-                <img src="img/home-appart.svg" width="75" height="72">
+              <li class="features__sub-item features__sub-item--house">
                 <h4>Жилье</h4>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li>
-                <img src="img/eat-burger.svg" width="75" height="70">
+              <li class="features__sub-item features__sub-item--food">
                 <h4>Еда</h4>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li>
-                <img src="img/gift-souvenirs.svg" width="64" height="77">
+              <li class="features__sub-item features__sub-item--gift">
                 <h4>Сувениры</h4>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
-          <li class="features__item-wide features__item-wide--photo-left">
-            <img src="img/devil-bridge.png" width="800" height="255">
+          <li class="features__item features__item--picture">
             <div class="features__text">
               <h3>Там есть мост дьявола</h3>
               <span>— №2 —</span>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-dekstop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg">
+              <img class="features__image" width="320" height="260" src="img/photo-bridge-mobile.jpg" alt="Sedona bridge">
+            </picture>
           </li>
-          <li class="features__item">
+          <li class="features__item features__text">
             <h3>Небольшая площадь</h3>
             <span>— №3 —</span>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__text">
             <h3>Красивая дорога</h3>
             <span>— №4 —</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__text">
             <h3>Мало туристов</h3>
             <span>— №5 —</span>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -92,10 +97,10 @@
         <p class="search-hotel__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
           гостиниц в Седоне</p>
         <div class="search-hotel__wrapper">
-          <button class="search-hotel__button button" type="button">Поиск гостиницы в Седоне</button>
+          <button class="search-hotel__button button" type="button">Найти гостиницу</button>
           <form class="form-search form-search--show" action="https://echo.htmlacademy.ru/" method="GET">
             <div class="form-search__row">
-              <label class="form-search__label" for="date-arrival">Дата заезда:</label>
+              <label class="form-search__label form-search__label--date" for="date-arrival">Дата заезда:</label>
               <input class="form-search__text" id="date-arrival" name="date-arrival" type="text"
                 placeholder="24 апреля 2017">
               <button class="form-search__calendar" type="button">
@@ -112,7 +117,7 @@
             </div>
 
             <div class="form-search__row">
-              <label class="form-search__label" for="date-leave">Дата выезда:</label>
+              <label class="form-search__label form-search__label--date" for="date-leave">Дата выезда:</label>
               <input class="form-search__text" id="date-leave" name="date-leave" type="text" placeholder="4 июля 2017">
               <button class="form-search__calendar" type="button">
                 <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
