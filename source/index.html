@@ -36,7 +36,7 @@
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="features__list">
-          <li class="features__item features__item--picture">
+          <li class="features__item features__item--picture features__item--triangle">
             <div class="features__text">
               <h3>Настоящий городок</h3>
               <span>— №1 —</span>
@@ -62,7 +62,7 @@
               </li>
             </ul>
           </li>
-          <li class="features__item features__item--picture">
+          <li class="features__item features__item--picture features__item--picture--photo-left">
             <div class="features__text">
               <h3>Там есть мост дьявола</h3>
               <span>— №2 —</span>
@@ -74,17 +74,17 @@
               <img class="features__image" width="320" height="260" src="img/photo-bridge-mobile.jpg" alt="Sedona bridge">
             </picture>
           </li>
-          <li class="features__item features__text">
+          <li class="features__item features__item--grey features__text">
             <h3>Небольшая площадь</h3>
             <span>— №3 —</span>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="features__item features__text">
+          <li class="features__item features__item--grey features__text">
             <h3>Красивая дорога</h3>
             <span>— №4 —</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="features__item features__text">
+          <li class="features__item features__item--grey features__text">
             <h3>Мало туристов</h3>
             <span>— №5 —</span>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -93,9 +93,11 @@
       </section>
 
       <section class="search-hotel">
+        <div class="search-hotel__text">
         <h2 class="search-hotel__heading">Заинтересовались?</h2>
-        <p class="search-hotel__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
+        <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
           гостиниц в Седоне</p>
+        </div>
         <div class="search-hotel__wrapper">
           <button class="search-hotel__button button" type="button">Найти гостиницу</button>
           <form class="form-search form-search--show" action="https://echo.htmlacademy.ru/" method="GET">
@@ -135,6 +137,7 @@
             <div class="form-search__row">
               <div class="form-search__age">
                 <label class="form-search__label" for="adult-ticket">Взрослые:</label>
+                <div>
                 <button class="button button--minus" type="button">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
@@ -151,9 +154,11 @@
                   </svg>
                   <span class="visually-hidden">Увеличить количество взрослых</span>
                 </button>
+                </div>
               </div>
               <div class="form-search__age">
                 <label class="form-search__label form-search__label--children" for="children-ticket">Дети:</label>
+                <div>
                 <button class="button button--minus" type="button">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
@@ -170,29 +175,28 @@
                   </svg>
                   <span class="visually-hidden">Увеличить количество детей</span>
                 </button>
+                </div>
               </div>
             </div>
 
-            <button class="button form-search__submit" type="submit">Найти</button>
+            <button class="button form-search__submit" type="submit">Поиск</button>
           </form>
 
           <div class="search-hotel__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d840735.277484057!2d-111.67046583593752!3d34.601071898338255!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1570218778407!5m2!1sru!2sru"
-              width="1200" height="593" style="border:0;" allowfullscreen="" tabindex="-1"></iframe>
+              width="1200" height="350" style="border:0;" allowfullscreen="" tabindex="-1"></iframe>
           </div>
         </div>
       </section>
   </main>
 
   <footer class="footer main-footer">
-    <section class="footer__hashtag">
-      <p>#VISITSEDONA<br />
-        <a class="footer-phone" href="tel:+74956660166"> Тел:+7(495)666-01-66</a>
-      </p>
-    </section>
+    <p class="footer__hashtag">
+        #VISITSEDONA
+    </p>
 
-    <section>
+    <section class="footer__social">
       <ul class="footer__social-list">
         <li class="footer__social-link">
           <a href="#">

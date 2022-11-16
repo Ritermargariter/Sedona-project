@@ -97,7 +97,6 @@
     background-color: $basic-blue;
   }
 
-  //доработать no js
   .header-navigation--nojs .header-navigation__toggle {
     display: none;
   }
@@ -112,13 +111,16 @@
   }
 
   .header-navigation--nojs  {
-    margin-top: 56px;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 10;
     display: block;
     background-color: $basic-white;
   }
 }
 
-.header-navigation__list {
+  .header-navigation__list {
   font-weight: 700;
   color: $basic-white;
   background-color: $basic-blue;
