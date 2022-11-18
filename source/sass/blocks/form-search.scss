@@ -7,6 +7,7 @@
   font-weight: 700;
   line-height: 26px;
   width: 89%;
+  max-width: 600px;
   padding: 20px 0;
   margin: 0 auto;
   background-color: $basic-white;
@@ -68,10 +69,17 @@
 }
 
 .form-search__row {
+  position: relative;
+  margin-bottom: 10px;
+  &--age {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form-search__age-wrapper {
   display: flex;
   align-items: center;
-  position: relative;
-  margin-bottom: 20px;
 }
 
 .form-search__age {
@@ -81,14 +89,19 @@
   align-items: center;
 }
 
-.form-search__label--date {
-  display: none;
+.form-search__date-wrapper {
+  position: relative;
+  width: 83%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .form-search__text {
+  box-sizing: border-box;
+  display: block;
   background-color: #f2f2f2;
   border: solid 2px #f2f2f2;
-  width: 83%;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
   height: 38px;
@@ -107,10 +120,12 @@
   }
 }
 
+
+
 .form-search__calendar {
   position: absolute;
   top: 5px;
-  right: 20px;
+  right: 10px;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -141,6 +156,7 @@
 
 .form-search__submit {
   width: 89%;
+  max-width: 500px;
   padding: 12px 0;
   margin: 0 auto;
   background-color: $basic-blue;

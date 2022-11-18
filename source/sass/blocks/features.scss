@@ -1,10 +1,10 @@
 .features__list {
-  line-height: 21px;
   background-color: $basic-bage;
 }
 
 .features__item h3 {
   font-size: 18px;
+  line-height: 26px;
 }
 
 .features__text {
@@ -20,35 +20,53 @@
   }
 }
 
-.features__item--picture .features__text {
-  padding: 21px 0;
-}
+@media (max-width: $mobile-width-only) {
 
-.features__item--triangle {
-  position: relative;
-
-  & h3 {
-    margin-top: 33px;
+  .features__item--picture .features__text {
+    padding: 21px 0;
   }
 
-  &::before, &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 50%;
-    height: 17px;
-    box-sizing: inherit;
+  .features__item--triangle {
+    position: relative;
+
+    & h3 {
+      margin-top: 33px;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 50%;
+      height: 17px;
+      box-sizing: inherit;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to bottom left, #fff 49.6%, transparent 50.4%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to bottom right, #fff 49.6%, transparent 50.4%);
+    }
   }
 
-  &::before {
-    left: 0;
-    background: linear-gradient(to bottom left, #fff 49.6%, transparent 50.4%);
-  }
+  .features__item--grey {
+    margin-top: 25px;
 
-  &::after {
-    right: 0;
-    background: linear-gradient(to bottom right, #fff 49.6%, transparent 50.4%);
+    & p {
+      margin-bottom:25px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: #D6D6D6;
+    }
   }
 }
 
@@ -65,93 +83,74 @@
   margin-left: 47px;
 
   & h4 {
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin: 0;
+    padding: 6px 0 16px;
     font-size: 18px;
+    line-height: 26px;
   }
 
   & p {
     margin: 0;
   }
 
+  &::before {
+    display:block;
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &--house {
       &::before {
-        position: absolute;
-        content: "";
+        top: 3px;
         left: -47px;
-        top: 1px;
         width: 39px;
         height: 37px;
         background-image: url("../../img/home-appart.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
       }
     }
 
     &--food {
       &::before {
-        position: absolute;
-        content: "";
-        left: -48px;
         top: 1px;
+        left: -48px;
         width: 40px;
         height: 38px;
         background-image: url("../../img/eat-burger.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
       }
     }
 
     &--gift {
       &::before {
-        position: absolute;
-        content: "";
-        left: -43px;
         top: 1px;
+        left: -43px;
         width: 32px;
         height: 38px;
         background-image: url("../../img/gift-souvenirs.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
       }
   }
 }
-
-
 
 .features__image {
   width: 100%;
   height: 260px;
 }
 
-.features__item--grey {
-  margin-top: 25px;
-
-  & p {
-    margin-bottom:25px;
-  }
-
-  &::after {
-      content: '';
-      display: block;
-      height: 1px;
-      background: #D6D6D6;
-    }
-}
 
 @media (min-width: $tablet-width) {
   .features__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 
   .features__item--picture {
      display: grid;
-    &--photo-right {
+     width: 100%;
+    &--right {
       grid-template-columns: 1fr 2fr;
     }
-    &--photo-left {
+    &--left {
       grid-template-columns: 2fr 1fr;
       & .features__text {
         order: 2;
@@ -160,8 +159,64 @@
   }
 
   .features__text {
-    max-width: 192px;
-    padding: 40px 0;
+    align-self: center;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 256px;
+    box-sizing: border-box;
+  }
+
+  .features__item--grey {
+    padding: 20px 0;
+  }
+
+  .features__sublist {
+    text-align: center;
+    grid-column: 1/3;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 70px;
+    padding: 60px 30px;
+  }
+
+  .features__sub-item {
+    margin-left:0;
+
+    & h4 {
+      padding: 10px 0 25px;
+    }
+
+    &--house {
+      &::before {
+        position: static;
+        top: 0;
+        left:0;
+        margin: 0 auto 16px;
+        width: 75px;
+        height: 72px;
+      }
+    }
+
+    &--food {
+      &::before {
+        position: static;
+        left: 0;
+        top: 0;
+        margin: 0 auto 16px;
+        width: 76px;
+        height: 71px;
+      }
+    }
+
+    &--gift {
+      &::before {
+        position: static;
+        left: 0;
+        top: 0;
+        margin: 0 auto 10px;
+        width: 64px;
+        height: 77px;
+      }
+    }
   }
 }
 

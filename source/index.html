@@ -36,7 +36,7 @@
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="features__list">
-          <li class="features__item features__item--picture features__item--triangle">
+          <li class="features__item features__item--picture features__item--picture--right features__item--triangle">
             <div class="features__text">
               <h3>Настоящий городок</h3>
               <span>— №1 —</span>
@@ -62,7 +62,7 @@
               </li>
             </ul>
           </li>
-          <li class="features__item features__item--picture features__item--picture--photo-left">
+          <li class="features__item features__item--picture features__item--picture--left">
             <div class="features__text">
               <h3>Там есть мост дьявола</h3>
               <span>— №2 —</span>
@@ -103,6 +103,7 @@
           <form class="form-search form-search--show" action="https://echo.htmlacademy.ru/" method="GET">
             <div class="form-search__row">
               <label class="form-search__label form-search__label--date" for="date-arrival">Дата заезда:</label>
+              <div class="form-search__date-wrapper">
               <input class="form-search__text" id="date-arrival" name="date-arrival" type="text"
                 placeholder="24 апреля 2017">
               <button class="form-search__calendar" type="button">
@@ -116,10 +117,12 @@
                 </svg>
                 <span class="visually-hidden">Календарь</span>
               </button>
+              </div>
             </div>
 
             <div class="form-search__row">
               <label class="form-search__label form-search__label--date" for="date-leave">Дата выезда:</label>
+              <div class="form-search__date-wrapper">
               <input class="form-search__text" id="date-leave" name="date-leave" type="text" placeholder="4 июля 2017">
               <button class="form-search__calendar" type="button">
                 <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,12 +135,13 @@
                 </svg>
                 <span class="visually-hidden">Календарь</span>
               </button>
+              </div>
             </div>
 
-            <div class="form-search__row">
+            <div class="form-search__row form-search__row--age">
               <div class="form-search__age">
                 <label class="form-search__label" for="adult-ticket">Взрослые:</label>
-                <div>
+                <div class="form-search__age-wrapper">
                 <button class="button button--minus" type="button">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
@@ -158,7 +162,7 @@
               </div>
               <div class="form-search__age">
                 <label class="form-search__label form-search__label--children" for="children-ticket">Дети:</label>
-                <div>
+                <div class="form-search__age-wrapper">
                 <button class="button button--minus" type="button">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />

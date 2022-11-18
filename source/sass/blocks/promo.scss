@@ -21,7 +21,16 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .promo {
+    margin: 47px 0 55px;
+  }
 
+  .promo p:first-child {
+    font-size: 21px;
+    padding: 0;
+  }
+}
 
 
 

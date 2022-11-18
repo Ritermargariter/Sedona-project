@@ -3,11 +3,12 @@
 }
 
 .search-hotel__text {
-  padding: 38px 6.25px 32px;
+  padding: 0 6.25%;
+  margin: 38px 0 32px;
 }
 
-.search-hotel__heading {
-  margin-top: 0;
+.search-hotel__text br {
+  display: none;
 }
 
 .search-hotel__wrapper {
@@ -25,6 +26,7 @@
   position: relative;
   padding: 16px 0;
   width: 89%;
+  max-width: 600px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;

@@ -1,6 +1,13 @@
-.header {
-  position: relative;
-  max-width: 767px;
+@media (max-width: $mobile-width-only) {
+  .header {
+    position: relative;
+    max-width: 767px;
+  }
+
+  .header-navigation {
+    min-height: 55px;
+    background-color: $basic-white;
+  }
 }
 
 .header-logo {
@@ -9,11 +16,6 @@
   transform: translateX(-50%);
   top: 0;
   z-index: 2;
-}
-
-.header-navigation {
-  min-height: 55px;
-  background-color: $basic-white;
 }
 
 .header-navigation__toggle {
@@ -134,10 +136,6 @@
 
 
 @media (min-width: $tablet-width) {
-  .header {
-    width: 768px;
-    margin: 0 auto;
-  }
 
   .header-navigation__list {
     color: $basic-black;
@@ -149,6 +147,7 @@
 
   .header-navigation__item {
     box-shadow: none;
+    padding: 0;
 
     &:hover {
       color: #81B3D2;
