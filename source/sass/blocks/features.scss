@@ -161,13 +161,17 @@
   .features__text {
     align-self: center;
     margin: 0 auto;
-    padding: 0;
+    padding: 40px 32px;
     max-width: 256px;
     box-sizing: border-box;
-  }
 
-  .features__item--grey {
-    padding: 20px 0;
+    & h3 {
+      margin-top: 0;
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
   }
 
   .features__sublist {
