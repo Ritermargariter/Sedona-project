@@ -9,6 +9,7 @@
 </head>
 
 <body class="page">
+<div class="container">
   <header class="main-header header">
     <a class="header-logo">
       <img src="img/index-logo.svg" width="138" height="70" alt="Логотип Седона">
@@ -26,9 +27,9 @@
 
   <main>
       <h1 class="visually-hidden">Седона</h1>
-      <div class="main-picture">
-      <img src="img/index-main-1.png" width="2400" height="1130" alt="Добро пожаловать в Седону">
-      </div>
+        <div class="main-picture">
+          <img src="img/welcome-sedona-mobile.svg" width="282" height="214" alt="Добро пожаловать в Седону">
+        </div>
       <div class="promo">
         <p>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -43,7 +44,7 @@
               <p>Седона-не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-city-dekstop.jpg">
+              <source media="(min-width:512px) and (max-width: 767px), (min-width: 1200px)" srcset="img/photo-city-dekstop.jpg">
               <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg">
               <img class="features__image" width="320" height="260" src="img/photo-city-mobile.jpg" alt="Sedona city building">
             </picture>
@@ -69,7 +70,7 @@
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-bridge-dekstop.jpg">
+              <source media="(min-width:512px) and (max-width: 767px), (min-width: 1200px)" srcset="img/photo-bridge-dekstop.jpg">
               <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg">
               <img class="features__image" width="320" height="260" src="img/photo-bridge-mobile.jpg" alt="Sedona bridge">
             </picture>
@@ -235,6 +236,7 @@
       </a>
     </p>
   </footer>
+</div>
 
   <script src="js/script.js"></script>
 </body>
