@@ -1,0 +1,38 @@
+.review-form__wrapper {
+  border: none;
+  padding-bottom: 25px;
+}
+
+.review-form__heading {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 24px;
+}
+
+.review-form__list li:not(li:last-child) {
+  margin-bottom: 16px;
+}
+
+.review-form__list--text li {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-form__input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 16px 0 16px 16px;
+  background-color: #F2F2F2;
+  border: none;
+
+  &--text::placeholder {
+    color: #000000;
+  }
+}
+
+

@@ -1,0 +1,16 @@
+.inner__container {
+  padding: 0 20px;
+}
+
+
+
+.inner__section-header {
+  text-align: center;
+  margin: 36px 0 28px;
+
+  & h2 {
+    padding-bottom: 25px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

@@ -17,44 +17,6 @@
 @import "blocks/footer";
 @import "blocks/filter-hotel";
 @import "blocks/main-picture";
-
-
-/*Footer information*/
-
-/*Catalog*/
-
-
-.control-sorting {
-  display: flex;
-  padding: 29px 73px;
-  width: 1200px;
-  align-items: center;
-}
-
-.control-sorting p:first-child {
-  margin-right: 46px;
-  font-weight: 700;
-  font-size: 21px;
-}
-
-.control-sorting p:nth-child(2) {
-  margin-right: 40px;
-}
-
-.sorting-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-  margin: 0;
-  padding: 0;
-}
-
-.catalog-filter button {
-  border: 2px solid #FFFFFF;
-  background-color: rgba(28, 28, 28, 0);
-  width: 137px;
-  height: 36px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
+@import "blocks/review-form";
+@import "blocks/inner";
 

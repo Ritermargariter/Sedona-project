@@ -1,25 +1,71 @@
-.main-picture {
+@media (max-width: $mobile-width-only) {
+
+  .main-picture, .inner-picture {
   background-image: url("../img/back-mobile-1x.jpg");
   background-repeat: no-repeat;
   background-position:  center top;
-  background-size: 100% 100%;
+  position: relative;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 50%;
+    height: 33px;
+    box-sizing: inherit;
+  }
+
+  &::before {
+    right: 0;
+    background: linear-gradient(to top left, #fff 49.6%, transparent 50.4%);
+  }
+
+  &::after {
+    left: 0;
+    background: linear-gradient(to top right, #fff 49.6%, transparent 50.4%);
+  }
+}
 }
 
 .main-picture img {
-  padding: 90px 0;
+  padding: 88px 0;
   margin: 0 auto;
-  height: 100%;
+}
+
+.inner-picture img {
+  padding: 52px 0 67px;
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .main-picture {
-    height: 518px;
+    background-image: url("../img/back-desktop.jpg");
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-size: 100% 57px;
+      background-repeat: no-repeat;
+      background-image: url("../img/bg-intro-triangle.svg");
+    }
+  }
+  .main-picture img {
+    width: 460px;
+    height:350px;
+    padding: 77px 0;
   }
 }
 
+
+
+
 @media (min-width: $desktop-width) {
 
-  .main-picture img {
-    object-fit: contain;
-  }
+
 }

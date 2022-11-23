@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<div class="container">
+
 <header class="header inner-header">
   <a class="header-logo">
     <img src="img/index-logo.svg" width="138" height="70" alt="Логотип Седона">
@@ -15,63 +17,64 @@
   <nav class="header-navigation header-navigation--closed header-navigation--nojs">
     <button class="header-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <ul class="header-navigation__list">
-      <li class="header-navigation__item header-navigation__item--current"><a href="#">Информация</a></li>
-      <li class="header-navigation__item"><a href="#">Фото и видео</a></li>
-      <li class="header-navigation__item"><a href="#">Форма отзыва</a></li>
+      <li class="header-navigation__item"><a href="#">Информация</a></li>
+      <li class="header-navigation__item"><a href="photo.html">Фото и видео</a></li>
+      <li class="header-navigation__item header-navigation__item--current"><a href="#">Форма отзыва</a></li>
       <li class="header-navigation__item"><a href="catalog.html">Гостиницы</a></li>
     </ul>
   </nav>
 </header>
+
 <main>
   <h1 class="visually-hidden">Форма отзыва</h1>
   <div class="inner-picture">
-
+    <img src="img/inner-picture.svg" width="229" height="39" alt="Добро пожаловать в Седону">
   </div>
 
-  <section class="inner-form">
-    <header class="form-header">
+  <section class="review inner__container">
+    <header class="review__header inner__section-header"">
       <h2>Оставьте свой отзыв</h2>
       <p>
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
       </p>
     </header>
 
-    <form>
-      <fieldset class="inner-form__wrapper">
-        <legend>Представьтесь:</legend>
-        <ul>
+    <form class="review-form">
+      <fieldset class="review-form__wrapper">
+        <legend class="review-form__heading">Представьтесь:</legend>
+        <ul class="review-form__list review-form__list--text">
           <li>
             <label for="name">Имя*:</label>
-            <input id="name" name="name" type="text" placeholder="Пётр">
+            <input class="review-form__input review-form__input--text" id="name" name="name" type="text" placeholder="Пётр">
           </li>
           <li>
             <label for="surname">Фамилия*:</label>
-            <input id="surname" name="surname" type="text" placeholder="Пустота">
+            <input class="review-form__input review-form__input--text" id="surname" name="surname" type="text" placeholder="Пустота">
           </li>
           <li>
             <label for="patronymic">Отчество*:</label>
-            <input id="patronymic" name="patronymic" type="text" placeholder="Викторович">
+            <input class="review-form__input review-form__input--text" id="patronymic" name="patronymic" type="text" placeholder="Викторович">
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="inner-form__wrapper">
-        <legend>Контактная информация:</legend>
-        <ul>
+      <fieldset class="review-form__wrapper">
+        <legend class="review-form__heading">Контактная информация:</legend>
+        <ul class="review-form__list review-form__list--text">
           <li>
             <label for="tel">Контактный телефон*:</label>
-            <input id="tel" name="tel" type="tel" placeholder="Введите телефон">
+            <input class="review-form__input review-form__input--contact" id="tel" name="tel" type="tel" placeholder="Введите телефон">
           </li>
           <li>
             <label for="email">Электронная почта*:</label>
-            <input id="email" name="email" type="email" placeholder="Введите e-mail">
+            <input class="review-form__input review-form__input--contact" id="email" name="email" type="email" placeholder="Введите e-mail">
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="inner-form__wrapper">
-        <legend>Ваше общее впечатление:</legend>
-        <ul>
+      <fieldset class="review-form__wrapper">
+        <legend class="review-form__heading">Ваше общее впечатление:</legend>
+        <ul class="review-form__list">
           <li>
             <input id="positive" name="positive" type="radio" checked>
             <label for="positive">Скорее положительное</label>
@@ -87,9 +90,9 @@
         </ul>
       </fieldset>
 
-      <fieldset class="inner-form__wrapper">
-        <legend>Посещенные достопримечательности:</legend>
-        <ul>
+      <fieldset class="review-form__wrapper">
+        <legend class="review-form__heading">Посещенные достопримечательности:</legend>
+        <ul class="review-form__list">
           <li>
             <input id="devil-bridge" name="devil-bridge" type="checkbox" checked>
             <label for="devil-bridge">Мост Дьявола</label>
@@ -109,8 +112,8 @@
         </ul>
       </fieldset>
 
-      <fieldset class="inner-form__wrapper">
-        <label for="emotions">Опишите свои эмоции:</label>
+      <fieldset class="review-form__wrapper">
+        <label  class="review-form__heading" for="emotions">Опишите свои эмоции:</label>
         <textarea id="emotions" name="emotions" rows="5" cols="33">Опишите подробно все свои восторги</textarea>
       </fieldset>
 
@@ -120,6 +123,7 @@
   </section>
 </main>
 
+</div>
 
 <footer class="footer main-footer">
   <p class="footer__hashtag">

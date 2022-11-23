@@ -10,6 +10,14 @@
 .features__text {
   text-align: center;
   padding: 0 6.25%;
+
+  & h3 {
+    padding-bottom: 11px;
+  }
+
+  & p {
+    padding-top: 17px;
+  }
 }
 
 .features__item--picture {
@@ -23,14 +31,15 @@
 @media (max-width: $mobile-width-only) {
 
   .features__item--picture .features__text {
-    padding: 21px 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .features__item--triangle {
     position: relative;
 
     & h3 {
-      margin-top: 33px;
+      padding-top: 21px;
     }
 
     &::before, &::after {
@@ -83,14 +92,9 @@
   margin-left: 47px;
 
   & h4 {
-    margin: 0;
     padding: 6px 0 16px;
     font-size: 18px;
     line-height: 26px;
-  }
-
-  & p {
-    margin: 0;
   }
 
   &::before {
@@ -166,11 +170,11 @@
     box-sizing: border-box;
 
     & h3 {
-      margin-top: 0;
+      padding-bottom: 17px;
     }
 
     & p {
-      margin-bottom: 0;
+      padding-top: 25px;
     }
   }
 

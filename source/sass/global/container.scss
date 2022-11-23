@@ -1,5 +1,15 @@
+.container {
+  min-height: 100%;
+  padding-bottom: 258px;
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
+  .container {
+    padding-bottom: 120px;
+  }
+}
+
+@media (min-width: $desktop-width) {
     .container {
     max-width: 1440px;
     margin: 0 auto;
