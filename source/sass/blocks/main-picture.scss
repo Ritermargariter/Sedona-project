@@ -1,9 +1,8 @@
 @media (max-width: $mobile-width-only) {
 
-  .main-picture, .inner-picture {
-  background-image: url("../img/back-mobile-1x.jpg");
-  background-repeat: no-repeat;
-  background-position:  center top;
+  .main-picture,
+  .inner-picture {
+  background: url("../img/back-mobile-1x.jpg") center top no-repeat;
   position: relative;
 
   &::before, &::after {
@@ -33,27 +32,10 @@
   margin: 0 auto;
 }
 
-.inner-picture img {
-  padding: 52px 0 67px;
-  margin: 0 auto;
-}
-
 @media (min-width: $tablet-width) {
   .main-picture {
-    background-image: url("../img/back-desktop.jpg");
+    background: url("../img/img.png") center top no-repeat;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background-size: 100% 57px;
-      background-repeat: no-repeat;
-      background-image: url("../img/bg-intro-triangle.svg");
-    }
   }
   .main-picture img {
     width: 460px;

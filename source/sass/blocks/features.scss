@@ -9,10 +9,14 @@
 
 .features__text {
   text-align: center;
-  padding: 0 6.25%;
+  padding: 0 20px;
 
   & h3 {
     padding-bottom: 11px;
+  }
+
+  & br {
+    display: none;
   }
 
   & p {
@@ -80,7 +84,7 @@
 }
 
 .features__sublist {
-  padding: 25px 6.25% 52px;
+  padding: 25px 20px 52px;
   display: grid;
   row-gap: 30px;
   background-color: $basic-white;
@@ -176,6 +180,10 @@
     & p {
       padding-top: 25px;
     }
+
+    & br {
+      display: block;
+    }
   }
 
   .features__sublist {
@@ -228,7 +236,19 @@
   }
 }
 
+@media (min-width: $desktop-width) {
 
+  .features__text {
+    padding: 40px 55px 55px;
+    max-width: 400px;
+  }
+
+  .features__sublist {
+    column-gap: 100px;
+    padding: 60px;
+  }
+
+}
 
 
 

@@ -1,7 +1,7 @@
 .promo {
   text-align: center;
   margin: 32px 0;
-  padding: 0 6.25%;
+  padding: 0 20px;
 }
 
 .promo p:first-child {
@@ -30,6 +30,13 @@
   .promo p:first-child {
     font-size: 21px;
     padding: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    margin: 49px 0 44px;
   }
 }
 

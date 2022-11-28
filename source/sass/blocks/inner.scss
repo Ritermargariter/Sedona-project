@@ -1,16 +1,39 @@
-.inner__container {
-  padding: 0 20px;
+.inner-picture {
+  background-position: center bottom;
 }
 
-
+.inner-picture img {
+  padding: 52px 0 67px;
+  margin: 0 auto;
+}
 
 .inner__section-header {
   text-align: center;
-  margin: 36px 0 28px;
+  padding: 36px 20px 28px;
+  position: relative;
 
   & h2 {
     padding-bottom: 25px;
     font-size: 18px;
     line-height: 26px;
+  }
+
+  ::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #E5E5E5;
+    display: block;
+    box-sizing: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .inner__container {
+    padding: 0 60px;
   }
 }
