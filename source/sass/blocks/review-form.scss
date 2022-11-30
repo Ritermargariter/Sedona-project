@@ -177,6 +177,10 @@
    flex-wrap: wrap;
  }
 
+  .review-form__heading {
+    font-size: 21px;
+  }
+
   .review-form__input {
     max-width: 280px;
   }
@@ -184,11 +188,30 @@
   .review-form__wrapper {
     padding: 0;
     width: 100%;
+
+    &:not(:last-of-type)::after {
+      display: none;
+    }
   }
   .review-form__wrapper--columns {
     width: 50%;
+
+    &:first-child::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 1px solid #E5E5E5;
+      display: block;
+      box-sizing: inherit;
+    }
   }
 }
+
+
+
 
 
 

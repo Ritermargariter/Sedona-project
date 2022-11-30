@@ -1,4 +1,4 @@
-@media (max-width: $mobile-width-only) {
+
 
   .main-picture,
   .inner-picture {
@@ -25,18 +25,18 @@
     background: linear-gradient(to top right, #fff 49.6%, transparent 50.4%);
   }
 }
-}
+
 
 .main-picture img {
   padding: 88px 0;
   margin: 0 auto;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: 768px) {
   .main-picture {
-    background: url("../img/img.png") center top no-repeat;
-    position: relative;
+
   }
+
   .main-picture img {
     width: 460px;
     height:350px;
