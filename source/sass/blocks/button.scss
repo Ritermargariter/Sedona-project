@@ -1,6 +1,11 @@
 .button {
   cursor: pointer;
   border: none;
+  font-weight: 700;
+  line-height: 26px;
+  color: $basic-white;
+  background-color: $basic-blue;
+  text-transform: uppercase;
 }
 
 .button--plus,

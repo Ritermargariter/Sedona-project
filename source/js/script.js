@@ -14,6 +14,87 @@ navToggle.addEventListener('click', function () {
 });
 
 
+let reviewForm = document.querySelector(".review-form");
+let modal = document.querySelector(".modal");
+let modalErr = document.querySelector(".modal__window--error");
+let modalSuccess = document.querySelector(".modal__window--success");
+let buttonSubmit = document.querySelector(".review-form__submit");
+let buttonErr = document.querySelector(".modal__button--err");
+let buttonSuccess = document.querySelector(".modal__button--success");
+let inputError = document.querySelector(".review-form__input");
+
+let firstName = document.querySelector("#name");
+let secondName = document.querySelector("#surname");
+let tel = document.querySelector("#tel");
+let email = document.querySelector("#email");
+let emotions = document.querySelector("#emotions");
+
+
+
+
+buttonSubmit.addEventListener("click", function (evt) {
+    if ((!firstName.value) || (!secondName.value) || (!tel.value) || (!email.value) || (!emotions.value)) {
+      evt.preventDefault();
+
+      firstName.classList.add("review-form__input--error");
+      secondName.classList.add("review-form__input--error");
+      tel.classList.add("review-form__input--error");
+      email.classList.add("review-form__input--error");
+      emotions.classList.add("review-form__input--error");
+
+      firstName.onclick = function() {
+        firstName.classList.remove("review-form__input--error");
+      };
+
+      secondName.onclick = function() {
+        secondName.classList.remove("review-form__input--error");
+      };
+
+      tel.onclick = function() {
+        tel.classList.remove("review-form__input--error");
+      };
+
+      email.onclick = function() {
+        email.classList.remove("review-form__input--error");
+      };
+
+      emotions.onclick = function() {
+        emotions.classList.remove("review-form__input--error");
+      };
+
+      modal.classList.add("modal__window--show");
+      modalErr.classList.add("modal__window--show");
+      buttonErr.addEventListener("click", function () {
+        modalErr.classList.remove("modal__window--show");
+        modal.classList.remove("modal__window--show");
+      });
+    }
+    else {
+      evt.preventDefault();
+
+      modal.classList.add("modal__window--show");
+      modalSuccess.classList.add("modal__window--show");
+      buttonSuccess.addEventListener("click", function () {
+        modalSuccess.classList.remove("modal__window--show");
+        modal.classList.remove("modal__window--show");
+        reviewForm.reset();
+    });
+  }
+}
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
 let buttonShow = document.querySelector('.search-hotel__button');
 let formSearch = document.querySelector('.form-search');
 
@@ -77,58 +158,5 @@ window.addEventListener('keydown', function (evt) {
   }
 })
 
-
-
-
-
-let popupErr = document.querySelector(".modal--error");
-let popupSuccess = document.querySelector(".modal--success");
-let buttonSubmit = document.querySelector(".review-form__submit");
-let buttonErr = document.querySelector(".modal__close-button--error");
-let buttonSuccess = document.querySelector(".modal__close-button--success");
-
-
-let firstName = document.querySelector("#name");
-let secondName = document.querySelector("#surname");
-let tel = document.querySelector("#tel");
-let email = document.querySelector("#email");
-let message = document.querySelector("#emotions");
-
-
-
-
-buttonSubmit.addEventListener("click", function (evt) {
-    if ((!firstName.value) || (!secondName.value) || (!tel.value) || (!email.value) || (!message.value)) {
-      evt.preventDefault();
-
-      firstName.classList.add("review-form__input--field-error");
-      secondName.classList.add("review-form__input--field-error");
-      tel.classList.add("review-form__input--field-error");
-      email.classList.add("review-form__input--field-error");
-      message.classList.add("review-form__input--field-error");
-
-
-      popupErr.classList.add("modal--show");
-      buttonErr.addEventListener("click", function () {
-        popupErr.classList.remove("modal--show");
-      });
-    }
-    else {
-      evt.preventDefault();
-
-      firstName.classList.remove("review-form__input--field-error");
-      secondName.classList.remove("review-form__input--field-error");
-      tel.classList.remove("review-form__input--field-error");
-      email.classList.remove("review-form__input--field-error");
-      message.classList.remove("review-form__input--field-error");
-
-
-      popupSuccess.classList.add("modal--show");
-
-
-    }
-  }
-
-);
 
 
