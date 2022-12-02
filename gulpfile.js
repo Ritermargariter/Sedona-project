@@ -67,6 +67,7 @@ const createWebp = () => {
       webp: {}
     }))
     .pipe(gulp.dest('build/img'))
+
 }
 
 // Svg
@@ -79,7 +80,6 @@ const svg = () =>
 
 const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
-    .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -131,7 +131,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts))
+  gulp.watch('source/js/*.js', gulp.series(scripts))
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

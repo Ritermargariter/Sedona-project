@@ -15,14 +15,16 @@
 }
 
 .modal__window {
+  display: flex;
+  flex-direction: column;
+
   opacity: 0;
   visibility: hidden;
   position: absolute;
   background-color: $basic-white;
-  padding: 45px 42px 35px;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   min-height: 280px;
-  top: 116px;
+
   left: 0;
   right: 0;
   text-align: center;
@@ -31,36 +33,68 @@
     opacity: 1;
     visibility: visible;
   }
+
+  &--error {
+    top: 116px;
+  }
+
+  &--success {
+    top: 402px;
+    justify-content: flex-end;
+  }
 }
 
 .modal__subject {
-  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
 }
 
 .modal__text {
-  margin-bottom: 28px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 40px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 }
 
-.modal__button {
-  width: 60%;
-  padding: 16px 54px;
-  font-size: 18px;
+.modal__button-wrapper {
+  background-color: #F2F2F2;
+  width: 100%;
+  padding: 20px;
 }
 
-.review-form__input--error {
-  background-color: rgba(169, 4, 4, 0.2);
+.modal__button {
+  padding: 16px 0;
+  font-size: 18px;
+
+
+  &--err {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &--success {
+    width: 100%;
+  }
 }
+
 
 @media (min-width: 410px) {
 
-  .modal br {
+  .modal__window--error br {
     display: block;
   }
 }
 
+@media (min-width: 496px) {
+
+  .modal__window--success br {
+    display: block;
+  }
+}
